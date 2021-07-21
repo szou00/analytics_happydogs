@@ -1,11 +1,253 @@
-date,inbox,Sent by Watchdog,Package,Temp test,Boarding,Pick-up/drop-off,Hows it going responses,Registration,Quick question asked,Exceptional situation,Interested but not registered,Previously PA,Dog health,Email tag/Boarding
-2020-12-12,234.0,43.0,17.0,7.0,3.0,2.0,1.0,1.0,0.0,0.0,,,,
-2020-12-12,403.0,13.0,6.0,0.0,1.0,1.0,1.0,,0.0,,,,,
-2020-12-12,504.0,2.0,0.0,0.0,0.0,0.0,1.0,,,,0.0,0.0,0.0,
-2020-12-12,208.0,3.0,3.0,1.0,1.0,1.0,0.0,1.0,,,,,,
-,,,,,,,,,,,,,,
-2020-12-13,234.0,409.0,11.0,1.0,379.0,3.0,1.0,1.0,,,1.0,,,
-2020-12-13,403.0,340.0,8.0,2.0,315.0,0.0,0.0,2.0,,,,,,
-2020-12-13,504.0,137.0,2.0,,131.0,,0.0,,,,,,,1.0
-2020-12-13,208.0,155.0,0.0,1.0,150.0,1.0,,1.0,,,,,,
-,,,,,,,,,,,,,,
+Date,Inbox,Tag,Num
+2021-07-16,234,Sent by Watchdog,141
+2021-07-16,234,Package,44
+2021-07-16,234,Boarding,38
+2021-07-16,234,Temp test,8
+2021-07-16,234,Pick-up/drop-off,9
+2021-07-16,234,Hows it going responses,7
+2021-07-16,234,Registration,3
+2021-07-16,234,Dog health,4
+2021-07-16,234,Exceptional situation,2
+2021-07-16,403,Sent by Watchdog,79
+2021-07-16,403,Package,29
+2021-07-16,403,Boarding,20
+2021-07-16,403,Pick-up/drop-off,9
+2021-07-16,403,Temp test,8
+2021-07-16,403,Exceptional situation,2
+2021-07-16,403,Registration,2
+2021-07-16,403,Dog health,1
+2021-07-16,403,Hows it going responses,0
+2021-07-16,403,Quick question asked,0
+2021-07-16,504,Sent by Watchdog,28
+2021-07-16,504,Package,11
+2021-07-16,504,Dog health,3
+2021-07-16,504,Pick-up/drop-off,4
+2021-07-16,504,Registration,3
+2021-07-16,504,Exceptional situation,3
+2021-07-16,504,Boarding,2
+2021-07-16,504,Hows it going responses,1
+2021-07-16,504,Temp test,1
+2021-07-16,208,Sent by Watchdog,44
+2021-07-16,208,Package,14
+2021-07-16,208,Temp test,3
+2021-07-16,208,Boarding,2
+2021-07-16,208,Hows it going responses,1
+2021-07-16,208,Registration,1
+2021-07-16,208,Auto replied,0
+2021-07-16,208,Member handbook confirmation,0
+2021-07-16,208,Pick-up/drop-off,0
+2021-07-17,234,Sent by Watchdog,117
+2021-07-17,234,Boarding,33
+2021-07-17,234,Package,33
+2021-07-17,234,Temp test,6
+2021-07-17,234,Pick-up/drop-off,5
+2021-07-17,234,Registration,2
+2021-07-17,234,Hows it going responses,1
+2021-07-17,234,Exceptional situation,1
+2021-07-17,234,Member handbook confirmation,1
+2021-07-17,234,Dog health,0
+2021-07-17,403,Sent by Watchdog,101
+2021-07-17,403,Package,33
+2021-07-17,403,Boarding,20
+2021-07-17,403,Pick-up/drop-off,8
+2021-07-17,403,Temp test,5
+2021-07-17,403,Exceptional situation,2
+2021-07-17,403,Hows it going responses,2
+2021-07-17,403,Dog health,1
+2021-07-17,403,Registration,1
+2021-07-17,403,Previously PA,1
+2021-07-17,504,Sent by Watchdog,26
+2021-07-17,504,Package,12
+2021-07-17,504,Temp test,3
+2021-07-17,504,Boarding,3
+2021-07-17,504,Hows it going responses,1
+2021-07-17,504,Dog health,1
+2021-07-17,504,Pick-up/drop-off,1
+2021-07-17,504,Exceptional situation,1
+2021-07-17,504,Registration,0
+2021-07-17,208,Sent by Watchdog,28
+2021-07-17,208,Package,8
+2021-07-17,208,Temp test,5
+2021-07-17,208,Boarding,4
+2021-07-17,208,Hows it going responses,2
+2021-07-17,208,Member handbook confirmation,2
+2021-07-17,208,Pick-up/drop-off,2
+2021-07-17,208,Auto replied,1
+2021-07-17,208,Exceptional situation,1
+2021-07-17,208,Dog health,1
+2021-07-17,208,Registration,0
+2021-07-18,234,Sent by Watchdog,139
+2021-07-18,234,Boarding,43
+2021-07-18,234,Package,33
+2021-07-18,234,Pick-up/drop-off,27
+2021-07-18,234,Temp test,5
+2021-07-18,234,Registration,3
+2021-07-18,234,Hows it going responses,2
+2021-07-18,234,Member handbook confirmation,0
+2021-07-18,234,Exceptional situation,0
+2021-07-18,403,Sent by Watchdog,103
+2021-07-18,403,Pick-up/drop-off,29
+2021-07-18,403,Package,28
+2021-07-18,403,Boarding,22
+2021-07-18,403,Temp test,9
+2021-07-18,403,Dog health,5
+2021-07-18,403,Hows it going responses,3
+2021-07-18,403,Previously PA,0
+2021-07-18,403,Exceptional situation,0
+2021-07-18,403,Registration,0
+2021-07-18,504,Sent by Watchdog,10
+2021-07-18,504,Package,4
+2021-07-18,504,Hows it going responses,1
+2021-07-18,504,Pick-up/drop-off,1
+2021-07-18,504,Dog health,0
+2021-07-18,504,Exceptional situation,0
+2021-07-18,504,Temp test,0
+2021-07-18,504,Boarding,0
+2021-07-18,208,Sent by Watchdog,13
+2021-07-18,208,Pick-up/drop-off,4
+2021-07-18,208,Package,4
+2021-07-18,208,Boarding,2
+2021-07-18,208,Auto replied,1
+2021-07-18,208,Member handbook confirmation,1
+2021-07-18,208,Temp test,1
+2021-07-18,208,Hows it going responses,0
+2021-07-18,208,Exceptional situation,0
+2021-07-18,208,Dog health,0
+2021-07-19,234,Sent by Watchdog,187
+2021-07-19,234,Pick-up/drop-off,41
+2021-07-19,234,Package,26
+2021-07-19,234,Boarding,20
+2021-07-19,234,Temp test,6
+2021-07-19,234,Exceptional situation,4
+2021-07-19,234,Dog health,3
+2021-07-19,234,Hows it going responses,1
+2021-07-19,234,Registration,1
+2021-07-19,403,Sent by Watchdog,108
+2021-07-19,403,Pick-up/drop-off,22
+2021-07-19,403,Package,20
+2021-07-19,403,Boarding,9
+2021-07-19,403,Temp test,3
+2021-07-19,403,Registration,2
+2021-07-19,403,Hows it going responses,1
+2021-07-19,403,Dog health,0
+2021-07-19,504,Sent by Watchdog,11
+2021-07-19,504,Package,3
+2021-07-19,504,Pick-up/drop-off,2
+2021-07-19,504,Auto replied,1
+2021-07-19,504,Member handbook confirmation,1
+2021-07-19,504,Boarding,1
+2021-07-19,504,Hows it going responses,0
+2021-07-19,208,Sent by Watchdog,17
+2021-07-19,208,Package,6
+2021-07-19,208,Pick-up/drop-off,6
+2021-07-19,208,Temp test,2
+2021-07-19,208,Registration,1
+2021-07-19,208,Auto replied,0
+2021-07-19,208,Member handbook confirmation,0
+2021-07-19,208,Boarding,0
+2021-07-20,234,Sent by Watchdog,218
+2021-07-20,234,Boarding,58
+2021-07-20,234,Package,57
+2021-07-20,234,Pick-up/drop-off,16
+2021-07-20,234,Temp test,13
+2021-07-20,234,Registration,4
+2021-07-20,234,Hows it going responses,1
+2021-07-20,234,Interested but not registered,1
+2021-07-20,234,Dog health,1
+2021-07-20,234,Exceptional situation,1
+2021-07-20,234,Member handbook confirmation,1
+2021-07-20,403,Sent by Watchdog,120
+2021-07-20,403,Package,34
+2021-07-20,403,Boarding,27
+2021-07-20,403,Temp test,11
+2021-07-20,403,Pick-up/drop-off,10
+2021-07-20,403,Hows it going responses,4
+2021-07-20,403,Registration,1
+2021-07-20,403,Dog health,1
+2021-07-20,403,What went wrong,1
+2021-07-20,504,Sent by Watchdog,41
+2021-07-20,504,Package,11
+2021-07-20,504,Boarding,3
+2021-07-20,504,Pick-up/drop-off,2
+2021-07-20,504,Registration,2
+2021-07-20,504,Temp test,1
+2021-07-20,504,Dog health,1
+2021-07-20,504,Auto replied,0
+2021-07-20,504,Member handbook confirmation,0
+2021-07-20,208,Sent by Watchdog,49
+2021-07-20,208,Package,10
+2021-07-20,208,Temp test,3
+2021-07-20,208,Boarding,3
+2021-07-20,208,Pick-up/drop-off,2
+2021-07-20,208,Registration,1
+2021-07-20,208,Dog health,1
+2021-07-21,234,Sent by Watchdog,171
+2021-07-21,234,Boarding,62
+2021-07-21,234,Package,47
+2021-07-21,234,Pick-up/drop-off,14
+2021-07-21,234,Temp test,7
+2021-07-21,234,Registration,7
+2021-07-21,234,Hows it going responses,6
+2021-07-21,234,Member handbook confirmation,2
+2021-07-21,234,Dog health,3
+2021-07-21,234,Interested but not registered,0
+2021-07-21,234,Exceptional situation,3
+2021-07-21,403,Sent by Watchdog,73
+2021-07-21,403,Package,19
+2021-07-21,403,Boarding,16
+2021-07-21,403,Temp test,4
+2021-07-21,403,Registration,2
+2021-07-21,403,Pick-up/drop-off,4
+2021-07-21,403,Hows it going responses,1
+2021-07-21,403,What went wrong,0
+2021-07-21,403,Dog health,0
+2021-07-21,403,Exceptional situation,1
+2021-07-21,504,Sent by Watchdog,25
+2021-07-21,504,Package,6
+2021-07-21,504,Temp test,3
+2021-07-21,504,Pick-up/drop-off,2
+2021-07-21,504,Boarding,1
+2021-07-21,504,Interested but not registered,1
+2021-07-21,504,Registration,0
+2021-07-21,504,Dog health,0
+2021-07-21,208,Sent by Watchdog,48
+2021-07-21,208,Package,10
+2021-07-21,208,Temp test,4
+2021-07-21,208,Pick-up/drop-off,3
+2021-07-21,208,Boarding,3
+2021-07-21,208,Dog health,1
+2021-07-21,208,Hows it going responses,1
+2021-07-21,208,Registration,0
+2021-07-22,234,Sent by Watchdog,97
+2021-07-22,234,Boarding,38
+2021-07-22,234,Package,31
+2021-07-22,234,Temp test,10
+2021-07-22,234,Pick-up/drop-off,6
+2021-07-22,234,Hows it going responses,4
+2021-07-22,234,Registration,3
+2021-07-22,234,Member handbook confirmation,1
+2021-07-22,234,Exceptional situation,1
+2021-07-22,234,Dog health,1
+2021-07-22,403,Sent by Watchdog,68
+2021-07-22,403,Boarding,18
+2021-07-22,403,Package,18
+2021-07-22,403,Temp test,8
+2021-07-22,403,Pick-up/drop-off,5
+2021-07-22,403,Registration,2
+2021-07-22,403,Hows it going responses,1
+2021-07-22,403,Dog health,2
+2021-07-22,403,Exceptional situation,1
+2021-07-22,504,Sent by Watchdog,16
+2021-07-22,504,Package,4
+2021-07-22,504,Temp test,3
+2021-07-22,504,Boarding,2
+2021-07-22,504,Hows it going responses,1
+2021-07-22,504,Interested but not registered,0
+2021-07-22,504,Pick-up/drop-off,0
+2021-07-22,208,Sent by Watchdog,38
+2021-07-22,208,Package,14
+2021-07-22,208,Boarding,2
+2021-07-22,208,Temp test,2
+2021-07-22,208,Hows it going responses,1
+2021-07-22,208,Pick-up/drop-off,1
+2021-07-22,208,Dog health,0
