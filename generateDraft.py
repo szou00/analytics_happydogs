@@ -27,7 +27,7 @@ def tag_events():
         Returns:
             None
     """
-    lastJob = load().timestamp() # loads the last time the emails were reviewed. only looks at emails past that
+    lastJob = load().timestamp() # loads the last time the events were reviewed. only looks at events past that
 
     url = "https://api2.frontapp.com/events?q[types]=comment&q[types]=inbound&q[after]=" + str(lastJob)
 
@@ -126,7 +126,7 @@ def create_draft(convoID):
 
     requests.request("POST", url, headers=headers, json=payload, files=files)
 
-
+# just to keep track for now - 
 # tag for 'AUTO-review-needed' : tag_mmlvp
 # tag for 'AUTO-reviewed' : tag_mmo1x
 def add_tag(convoID,tagID):
@@ -192,7 +192,7 @@ def retrieve_comments(convoID):
 
 
 def save():
-    """Writes the current time to a file. This lets us keep track of the last time the program runs.
+    """Writes the current time to a file.
        
        Parameters:
             None
@@ -206,7 +206,7 @@ def save():
 
 
 def load():
-    """Retrieves the last time the program was run from the file. This way, we won't have to look at
+    """Retrieves the last time the program was ran from the file. This way, we won't have to look at
        events that were already looked at. 
 
        Parameters:
@@ -219,7 +219,6 @@ def load():
         f = open('lastjob','r')
         lastJob = datetime.datetime.strptime(f.read(),"%Y-%m-%d %H:%M:%S")
         f.close()
-        print(lastJob)
         return lastJob
     save()
     return datetime.datetime.now() # if file doesn't exist (possible if it's the first run), return current time
