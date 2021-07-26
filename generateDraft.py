@@ -1,8 +1,11 @@
 import requests
 import json
+import time
+import datetime
+
 
 def jprint(obj):
-    """Prints a formatted string of a JSON object. 
+    """Prints a formatted string of a JSON object. Used for easier viewing purposes.
 
         Parameters:
             obj: A Javascript Object
@@ -14,8 +17,8 @@ def jprint(obj):
     print(text)
 
 
-def go_thru_convos():
-    """Retrieves all the open conversations. Placeholder(?) until I figure out how to work Events.  
+def tag_events():
+    """Retrieves emails that are inbound or commented on and tags them with 'AUTO-review-needed'
 
         Parameters:
             None
@@ -23,7 +26,38 @@ def go_thru_convos():
         Returns:
             None
     """
-    url = "https://api2.frontapp.com/conversations/search/is:open"
+    lastJob = load().timestamp() # loads the last time the emails were reviewed. only looks at emails past that
+
+    url = "https://api2.frontapp.com/events?q[types]=comment&q[types]=inbound&q[after]=" + str(lastJob)
+
+    payload = {}
+    headers = {
+    'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzY29wZXMiOlsicHJpdmF0ZToqIl0sImlhdCI6MTYyNjk4MTM5NSwiaXNzIjoiZnJvbnQiLCJzdWIiOiJoYXBweV9kb2dzX255YyIsImp0aSI6IjBiNjJkNWMzYTRmMWExMzQifQ.IPviahR63lerU4f1zJmBZGkDTW1nA3GXy2zr_gGgVPU'
+    }
+
+    response = requests.request("GET", url, headers=headers, data=payload)
+    events = response.json()["_results"]
+    # jprint(events)
+    for event in events:
+        email = event["conversation"]
+        convoID = email["id"] 
+        remove_tag(convoID,"tag_mmo1x") # if the email was marked as AUTO-reviewed, untag it
+        add_tag(convoID,"tag_mmlvp") # now add AUTO-review-needed tag
+        print("tagged " + convoID) 
+
+
+def go_thru_convos():
+    """Goes through all the conversations that have the tag 'AUTO-review-needed' and creates drafts as 
+       necessary.  
+
+        Parameters:
+            None
+
+        Returns:
+            None
+    """
+
+    url = "https://api2.frontapp.com/conversations/search/tag:tag_mmlvp"
 
     payload = {}
     files = []
@@ -36,19 +70,19 @@ def go_thru_convos():
     emails = response.json()["_results"]
 
     for email in emails:  
-        convoID = email["id"] # retreiving the tag from the conversation object
+        convoID = email["id"] 
         # jprint(convoID)
         for tag in email["tags"]:
-            if tag["name"] == "example-tag":
-                jprint(convoID)
-                jprint(tag["name"])
+            # CREATE DRAFT HERE
+            if tag["name"] == "example-tag": # simple example of draft being created based on a tag
                 create_draft(convoID)
-                remove_tag(convoID)
-                retrieve_comments(convoID)
+        retrieve_comments(convoID) # placeholder
+        remove_tag(convoID,"tag_mmlvp") # removes AUTO-review-needed tag
+        add_tag(convoID,"tag_mmo1x") # adds AUTO-reviewed tag
 
 
 def get_canned_response(templateID):
-    """Get message template. Currently only gets a certain one.   
+    """Get message template. Currently only gets a certain one. [NEEDS FIXING]
 
         Parameters:
             templateID: A string containing the ID of the response template
@@ -64,7 +98,6 @@ def get_canned_response(templateID):
     }
 
     cannedResponse = requests.request("GET", url, headers=headers, data=payload, files=files)
-
     return cannedResponse.json()
 
 
@@ -78,14 +111,13 @@ def create_draft(convoID):
             None
     """
     cannedResponse = get_canned_response("rsp_3rd8l")
-    # jprint(cannedResponse)
 
     url = "https://api2.frontapp.com/conversations/" + convoID + "/drafts"
 
     payload = { 'body': cannedResponse["body"],
                 'subject': cannedResponse["subject"],
-                'author_id': 'tea_188ud',
-                'channel_id': 'cha_14tfp'}
+                'author_id': 'tea_188ud', # [needs to change later on]
+                'channel_id': 'cha_14tfp'} # [also will need to be changed for team based settings]
     files = []
     headers = {
     'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzY29wZXMiOlsicHJpdmF0ZToqIl0sImlhdCI6MTYyNjk4MTM5NSwiaXNzIjoiZnJvbnQiLCJzdWIiOiJoYXBweV9kb2dzX255YyIsImp0aSI6IjBiNjJkNWMzYTRmMWExMzQifQ.IPviahR63lerU4f1zJmBZGkDTW1nA3GXy2zr_gGgVPU'
@@ -93,20 +125,22 @@ def create_draft(convoID):
 
     requests.request("POST", url, headers=headers, json=payload, files=files)
 
-    # jprint(response.json())        
 
-def add_tag(convoID):
+# tag for 'AUTO-review-needed' : tag_mmlvp
+# tag for 'AUTO-reviewed' : tag_mmo1x
+def add_tag(convoID,tagID):
     """Adds tags to conversation.   
 
         Parameters:
             convoID: A string containing the ID of the conversation to add tags to
+            tagID: A string containing the ID of the tag to add 
 
         Returns:
             None
     """
     url = "https://api2.frontapp.com/conversations/" + convoID + "/tags"
 
-    payload = json.dumps({ "tag_ids": ["tag_mkipx","tag_mld1h"]})
+    payload = json.dumps({ "tag_ids": [tagID]})
     headers = {
     'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzY29wZXMiOlsicHJpdmF0ZToqIl0sImlhdCI6MTYyNjk4MTM5NSwiaXNzIjoiZnJvbnQiLCJzdWIiOiJoYXBweV9kb2dzX255YyIsImp0aSI6IjBiNjJkNWMzYTRmMWExMzQifQ.IPviahR63lerU4f1zJmBZGkDTW1nA3GXy2zr_gGgVPU',
     'Content-Type': 'application/json'
@@ -114,20 +148,20 @@ def add_tag(convoID):
 
     requests.request("POST", url, headers=headers, data=payload)
 
-# only adds in two specific tags
-def remove_tag(convoID):
+
+def remove_tag(convoID,tagID):
     """Removes tags from a conversation.   
 
         Parameters:
             convoID: A string containing the ID of the conversation to remove tags from
+            tagID: A string containing the ID of the tag to remove
 
         Returns:
             None
     """
-
     url = "https://api2.frontapp.com/conversations/" + convoID + "/tags"
 
-    payload = json.dumps({ "tag_ids": ["tag_mkipx","tag_mld1h"]})
+    payload = json.dumps({ "tag_ids": [tagID]})
     headers = {
     'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzY29wZXMiOlsicHJpdmF0ZToqIl0sImlhdCI6MTYyNjk4MTM5NSwiaXNzIjoiZnJvbnQiLCJzdWIiOiJoYXBweV9kb2dzX255YyIsImp0aSI6IjBiNjJkNWMzYTRmMWExMzQifQ.IPviahR63lerU4f1zJmBZGkDTW1nA3GXy2zr_gGgVPU',
     'Content-Type': 'application/json'
@@ -135,8 +169,9 @@ def remove_tag(convoID):
 
     requests.request("DELETE", url, headers=headers, data=payload)
 
+
 def retrieve_comments(convoID):
-    """Retreives comments from a given conversation.  
+    """Retreives comments from a given conversation. Useful for deciding what template to use. 
 
         Parameters:
             convoID: A string containing the ID of the conversation to retrieve comments from
@@ -155,9 +190,25 @@ def retrieve_comments(convoID):
         jprint(comment["body"])
 
 
+def save():
+    f = open('lastjob','w')
+    f.write(datetime.datetime.strftime(datetime.datetime.now(),"%Y-%m-%d %H:%M:%S"))
+    f.close()
+
+
+def load():
+    f = open('lastjob','r')
+    lastJob = datetime.datetime.strptime(f.read(),"%Y-%m-%d %H:%M:%S")
+    f.close()
+    # print(lastJob.timestamp())
+    return lastJob
+
 
 def main():
+    tag_events()
+    time.sleep(5)
     go_thru_convos()
+    save()
 
 if __name__ == "__main__":
     main()
