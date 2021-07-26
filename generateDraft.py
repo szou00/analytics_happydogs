@@ -2,6 +2,7 @@ import requests
 import json
 import time
 import datetime
+import os.path
 
 
 def jprint(obj):
@@ -191,17 +192,37 @@ def retrieve_comments(convoID):
 
 
 def save():
+    """Writes the current time to a file. This lets us keep track of the last time the program runs.
+       
+       Parameters:
+            None
+
+        Returns:
+            None
+    """
     f = open('lastjob','w')
     f.write(datetime.datetime.strftime(datetime.datetime.now(),"%Y-%m-%d %H:%M:%S"))
     f.close()
 
 
 def load():
-    f = open('lastjob','r')
-    lastJob = datetime.datetime.strptime(f.read(),"%Y-%m-%d %H:%M:%S")
-    f.close()
-    # print(lastJob.timestamp())
-    return lastJob
+    """Retrieves the last time the program was run from the file. This way, we won't have to look at
+       events that were already looked at. 
+
+       Parameters:
+            None
+
+        Returns:
+            None
+    """
+    if (os.path.isfile('lastjob')): # if the file exists
+        f = open('lastjob','r')
+        lastJob = datetime.datetime.strptime(f.read(),"%Y-%m-%d %H:%M:%S")
+        f.close()
+        print(lastJob)
+        return lastJob
+    save()
+    return datetime.datetime.now() # if file doesn't exist (possible if it's the first run), return current time
 
 
 def main():
