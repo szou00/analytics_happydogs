@@ -42,10 +42,9 @@ def tag_events():
     for event in events:
         email = event["conversation"]
         convoID = email["id"] 
-        print(email["subject"])
         remove_tag(convoID,"tag_mmo1x") # if the email was marked as AUTO-reviewed, untag it
         add_tag(convoID,"tag_mmlvp") # now add AUTO-review-needed tag
-        print("tagged " + convoID) 
+        print("Flagged:" + email["subject"])
 
 
 def go_thru_convos():
@@ -72,19 +71,20 @@ def go_thru_convos():
     emails = response.json()["_results"]
 
     for email in emails:  
-        convoID = email["id"] 
+        convoID = email["id"]
         # jprint(convoID)
         for tag in email["tags"]:
             # CREATE DRAFT HERE
             if tag["name"] == "example-tag": # simple example of draft being created based on a tag
-                create_draft(convoID)
+                create_draft(convoID,"rsp_3rd8l")
         retrieve_comments(convoID) # placeholder
         remove_tag(convoID,"tag_mmlvp") # removes AUTO-review-needed tag
         add_tag(convoID,"tag_mmo1x") # adds AUTO-reviewed tag
+        print("Reviewed:" + email["subject"])
 
 
 def get_canned_response(templateID):
-    """Get message template. Currently only gets a certain one. [NEEDS FIXING]
+    """Get message template. Only called by create_draft(convoID,draftID).
 
         Parameters:
             templateID: A string containing the ID of the response template
@@ -103,7 +103,7 @@ def get_canned_response(templateID):
     return cannedResponse.json()
 
 
-def create_draft(convoID):
+def create_draft(convoID, draftID):
     """Drafts a reply accordingly using a canned response.    
 
         Parameters:
@@ -112,7 +112,7 @@ def create_draft(convoID):
         Returns:
             None
     """
-    cannedResponse = get_canned_response("rsp_3rd8l")
+    cannedResponse = get_canned_response(draftID)
 
     url = "https://api2.frontapp.com/conversations/" + convoID + "/drafts"
 
@@ -201,8 +201,9 @@ def save():
         Returns:
             None
     """
-    f = open('lastjob','w')
+    f = open('/Users/szou/Downloads/bu/happydogs/analytics_happydogs/lastjob','w')
     f.write(datetime.datetime.strftime(datetime.datetime.now(),"%Y-%m-%d %H:%M:%S"))
+    print(datetime.datetime.now())
     f.close()
 
 
@@ -216,8 +217,8 @@ def load():
         Returns:
             None
     """
-    if (os.path.isfile('lastjob')): # if the file exists
-        f = open('lastjob','r')
+    if (os.path.isfile('/Users/szou/Downloads/bu/happydogs/analytics_happydogs/lastjob')): # if the file exists
+        f = open('/Users/szou/Downloads/bu/happydogs/analytics_happydogs/lastjob','r')
         lastJob = datetime.datetime.strptime(f.read(),"%Y-%m-%d %H:%M:%S")
         f.close()
         return lastJob
@@ -226,11 +227,16 @@ def load():
 
 
 def main():
+    print("\n") # for easier CRON output viewing, separating each output
     tag_events()
-    save()
     time.sleep(5)
     go_thru_convos()
+    save()
+    # create_draft("cnv_8rjow91", "rsp_3rd8l")
 
+# to run the CRON JOB: */5 * * * * /Users/szou/Downloads/bu/happydogs/analytics_happydogs/env/bin/python 
+# /Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py 
+# >>/Users/szou/Downloads/bu/happydogs/analytics_happydogs/CRONoutput.log 2>&1
 
 if __name__ == "__main__":
     main()

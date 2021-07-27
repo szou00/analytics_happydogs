@@ -1,0 +1,46 @@
+From Beginner Coder to Pod Leader in 3 Years! 🤓
+tagged cnv_8rlcrlx
+Traceback (most recent call last):
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 237, in <module>
+    main()
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 233, in main
+    create_draft("cnv_8rjow91", draftID)
+NameError: name 'draftID' is not defined
+Second email
+tagged cnv_8rlff2d
+Testing CRON tab again
+tagged cnv_8rlfath
+Successfully reviewed: 
+Breaking News: Citing new data on the Delta variant’s spread, the C.D.C. urged masking in schools and indoors in Covid hot spots, even for vaccinated people.
+tagged cnv_8rljged
+
+
+
+Successfully reviewed: 
+
+
+Flagged:Testing PO again
+Flagged:Testing Print Outputs
+Flagged:Your submission was rejected
+2021-07-27 16:15:06.393862
+Reviewed:Testing Print Outputs
+
+
+2021-07-27 16:20:01.582664
+Reviewed:Testing PO again
+Reviewed:Your submission was rejected
+
+
+2021-07-27 16:30:02.120070
+
+
+Flagged:Need help getting organized? Ask Alexa.
+2021-07-27 16:35:03.846427
+
+
+Reviewed:Need help getting organized? Ask Alexa.
+2021-07-27 16:40:09.236665
+
+
+Flagged:Breaking News: The Biden administration is considering requiring all federal employees to get Covid vaccines or submit to regular testing and other requirements.
+2021-07-27 16:45:08.669640
