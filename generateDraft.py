@@ -42,6 +42,7 @@ def tag_events():
     for event in events:
         email = event["conversation"]
         convoID = email["id"] 
+        print(email["subject"])
         remove_tag(convoID,"tag_mmo1x") # if the email was marked as AUTO-reviewed, untag it
         add_tag(convoID,"tag_mmlvp") # now add AUTO-review-needed tag
         print("tagged " + convoID) 
@@ -226,9 +227,10 @@ def load():
 
 def main():
     tag_events()
+    save()
     time.sleep(5)
     go_thru_convos()
-    save()
+
 
 if __name__ == "__main__":
     main()
