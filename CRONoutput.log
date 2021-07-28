@@ -44,3 +44,567 @@ Reviewed:Need help getting organized? Ask Alexa.
 
 Flagged:Breaking News: The Biden administration is considering requiring all federal employees to get Covid vaccines or submit to regular testing and other requirements.
 2021-07-27 16:45:08.669640
+
+
+Reviewed:Breaking News: The Biden administration is considering requiring all federal employees to get Covid vaccines or submit to regular testing and other requirements.
+2021-07-27 16:50:08.838001
+
+
+2021-07-27 16:55:06.699269
+
+
+Flagged:[SUSPECTED SPAM] [Action Required] Hardware Project Pre-Registration Survey
+Flagged:[Slack] James mentioned you in #nationals-boston-university
+Reviewed:[SUSPECTED SPAM] [Action Required] Hardware Project Pre-Registration Survey
+Reviewed:[Slack] James mentioned you in #nationals-boston-university
+2021-07-27 20:15:12.087295
+
+
+2021-07-27 20:20:06.947557
+
+
+2021-07-27 20:25:06.726803
+
+
+2021-07-27 20:30:06.166862
+
+
+2021-07-27 20:35:10.982436
+
+
+2021-07-27 20:40:10.962907
+
+
+2021-07-27 20:45:07.407938
+
+
+2021-07-27 20:50:07.965311
+
+
+2021-07-27 20:55:06.601729
+
+
+2021-07-27 21:00:06.745324
+
+
+2021-07-27 21:05:06.587930
+
+
+2021-07-27 21:10:07.134670
+
+
+2021-07-27 21:15:06.826168
+
+
+2021-07-27 21:25:07.066425
+
+
+2021-07-27 21:30:06.842503
+
+
+Traceback (most recent call last):
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/env/lib/python3.8/site-packages/urllib3/connectionpool.py", line 699, in urlopen
+    httplib_response = self._make_request(
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/env/lib/python3.8/site-packages/urllib3/connectionpool.py", line 382, in _make_request
+    self._validate_conn(conn)
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/env/lib/python3.8/site-packages/urllib3/connectionpool.py", line 1010, in _validate_conn
+    conn.connect()
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/env/lib/python3.8/site-packages/urllib3/connection.py", line 411, in connect
+    self.sock = ssl_wrap_socket(
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/env/lib/python3.8/site-packages/urllib3/util/ssl_.py", line 449, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/env/lib/python3.8/site-packages/urllib3/util/ssl_.py", line 493, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+  File "/Applications/anaconda3/lib/python3.8/ssl.py", line 500, in wrap_socket
+    return self.sslsocket_class._create(
+  File "/Applications/anaconda3/lib/python3.8/ssl.py", line 1040, in _create
+    self.do_handshake()
+  File "/Applications/anaconda3/lib/python3.8/ssl.py", line 1309, in do_handshake
+    self._sslobj.do_handshake()
+TimeoutError: [Errno 60] Operation timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/env/lib/python3.8/site-packages/requests/adapters.py", line 439, in send
+    resp = conn.urlopen(
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/env/lib/python3.8/site-packages/urllib3/connectionpool.py", line 755, in urlopen
+    retries = retries.increment(
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/env/lib/python3.8/site-packages/urllib3/util/retry.py", line 532, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/env/lib/python3.8/site-packages/urllib3/packages/six.py", line 769, in reraise
+    raise value.with_traceback(tb)
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/env/lib/python3.8/site-packages/urllib3/connectionpool.py", line 699, in urlopen
+    httplib_response = self._make_request(
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/env/lib/python3.8/site-packages/urllib3/connectionpool.py", line 382, in _make_request
+    self._validate_conn(conn)
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/env/lib/python3.8/site-packages/urllib3/connectionpool.py", line 1010, in _validate_conn
+    conn.connect()
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/env/lib/python3.8/site-packages/urllib3/connection.py", line 411, in connect
+    self.sock = ssl_wrap_socket(
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/env/lib/python3.8/site-packages/urllib3/util/ssl_.py", line 449, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/env/lib/python3.8/site-packages/urllib3/util/ssl_.py", line 493, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+  File "/Applications/anaconda3/lib/python3.8/ssl.py", line 500, in wrap_socket
+    return self.sslsocket_class._create(
+  File "/Applications/anaconda3/lib/python3.8/ssl.py", line 1040, in _create
+    self.do_handshake()
+  File "/Applications/anaconda3/lib/python3.8/ssl.py", line 1309, in do_handshake
+    self._sslobj.do_handshake()
+urllib3.exceptions.ProtocolError: ('Connection aborted.', TimeoutError(60, 'Operation timed out'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 242, in <module>
+    main()
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 233, in main
+    go_thru_convos()
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 70, in go_thru_convos
+    response = requests.request("GET", url, headers=headers, data=payload, files=files)
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/env/lib/python3.8/site-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/env/lib/python3.8/site-packages/requests/sessions.py", line 542, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/env/lib/python3.8/site-packages/requests/sessions.py", line 655, in send
+    r = adapter.send(request, **kwargs)
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/env/lib/python3.8/site-packages/requests/adapters.py", line 498, in send
+    raise ConnectionError(err, request=request)
+requests.exceptions.ConnectionError: ('Connection aborted.', TimeoutError(60, 'Operation timed out'))
+
+
+2021-07-27 21:35:07.256406
+
+
+2021-07-27 21:40:07.036888
+
+
+2021-07-27 21:45:06.836102
+
+
+2021-07-27 21:50:11.077449
+
+
+2021-07-27 21:55:07.408306
+
+
+2021-07-27 22:00:07.409419
+
+
+2021-07-27 22:05:07.567915
+
+
+2021-07-27 22:10:08.403141
+
+
+2021-07-27 22:15:07.842728
+
+
+2021-07-27 22:20:06.330224
+
+
+2021-07-27 22:25:07.349886
+
+
+Flagged:Document shared with you: "numb"
+2021-07-27 22:30:08.382852
+
+
+Flagged:Enrollment Confirmation: You are now eligible to Shop with Points at Amazon.com
+Flagged:Jin Young Bang’s Trello board is still waiting for you.
+Reviewed:Enrollment Confirmation: You are now eligible to Shop with Points at Amazon.com
+Reviewed:Jin Young Bang’s Trello board is still waiting for you.
+Reviewed:Document shared with you: "numb"
+2021-07-27 22:35:16.031998
+
+
+2021-07-27 22:40:06.923762
+
+
+2021-07-27 22:45:06.984901
+
+
+2021-07-27 22:50:14.666582
+
+
+2021-07-27 22:55:07.329350
+
+
+2021-07-27 23:00:07.352552
+
+
+2021-07-27 23:05:07.230946
+
+
+2021-07-27 23:10:07.307932
+
+
+Flagged:Breaking News: Katie Ledecky of the U.S., the world’s best distance swimmer, won gold in the first women’s 1,500-meter freestyle in the Olympics’ history.
+Reviewed:Breaking News: Katie Ledecky of the U.S., the world’s best distance swimmer, won gold in the first women’s 1,500-meter freestyle in the Olympics’ history.
+2021-07-27 23:15:10.598937
+
+
+2021-07-27 23:20:07.132524
+
+
+2021-07-27 23:25:07.137405
+
+
+2021-07-27 23:30:06.821152
+
+
+2021-07-27 23:35:07.319005
+
+
+2021-07-27 23:40:06.890693
+
+
+2021-07-27 23:45:06.865489
+
+
+2021-07-27 23:50:07.531592
+
+
+2021-07-27 23:55:07.825038
+
+
+2021-07-28 00:00:06.726267
+
+
+2021-07-28 00:05:07.125807
+
+
+2021-07-28 00:10:07.399630
+
+
+2021-07-28 00:15:07.705940
+
+
+2021-07-28 00:20:06.380873
+
+
+2021-07-28 00:25:07.239089
+
+
+2021-07-28 00:30:07.176625
+
+
+2021-07-28 00:35:07.576169
+
+
+2021-07-28 00:40:07.134522
+
+
+2021-07-28 00:45:06.839102
+
+
+2021-07-28 00:50:06.273282
+
+
+2021-07-28 00:55:27.979984
+
+
+2021-07-28 01:00:06.747690
+
+
+Flagged:Wildfire Smoke over New England Is Public Health Threat
+Flagged:New England Air Quality Plummets from Western Wildfire Smoke
+Flagged:Breaking News: Simone Biles will not compete in the all-around gymnastics competition after withdrawing from the team finals because of a mental health issue.
+Reviewed:Wildfire Smoke over New England Is Public Health Threat
+2021-07-28 08:15:15.194570
+
+
+Reviewed:New England Air Quality Plummets from Western Wildfire Smoke
+Reviewed:Breaking News: Simone Biles will not compete in the all-around gymnastics competition after withdrawing from the team finals because of a mental health issue.
+2021-07-28 08:20:10.559217
+
+
+2021-07-28 08:25:06.547590
+
+
+2021-07-28 08:30:07.420044
+
+
+Flagged:Blackstone Application – Invitation to pymetrics Assessment
+2021-07-28 08:35:07.439158
+
+
+Reviewed:Blackstone Application – Invitation to pymetrics Assessment
+2021-07-28 08:40:08.892944
+
+
+2021-07-28 08:45:06.756300
+
+
+2021-07-28 08:50:07.001546
+
+
+2021-07-28 08:55:12.189773
+
+
+2021-07-28 09:00:12.186771
+
+
+2021-07-28 09:05:07.521398
+
+
+2021-07-28 09:10:07.636402
+
+
+2021-07-28 09:15:06.949045
+
+
+2021-07-28 09:20:07.211898
+
+
+2021-07-28 09:25:11.418374
+
+
+2021-07-28 09:30:07.323744
+
+
+2021-07-28 09:35:07.672410
+
+
+2021-07-28 09:40:06.489471
+
+
+2021-07-28 09:45:10.365127
+
+
+2021-07-28 09:50:07.258643
+
+
+2021-07-28 09:55:07.292236
+
+
+2021-07-28 10:00:07.673327
+
+
+2021-07-28 10:05:07.720834
+
+
+2021-07-28 10:10:06.695388
+
+
+2021-07-28 10:15:07.053010
+
+
+2021-07-28 10:20:07.769529
+
+
+2021-07-28 10:25:06.780730
+
+
+2021-07-28 10:30:06.705497
+
+
+2021-07-28 10:35:06.337266
+
+
+Flagged:Prove Your Standom
+Reviewed:Prove Your Standom
+2021-07-28 10:40:09.794844
+
+
+2021-07-28 10:47:17.105665
+
+
+2021-07-28 10:50:06.501363
+
+
+Flagged:Breaking News: Gov. Andrew Cuomo of New York said all state employees must be vaccinated or face weekly tests, and announced stricter rules for state-hospital workers.
+Flagged:Tell us more about your first month with AWS
+Flagged:Make customers happy with these 12 email templates
+Flagged:July News From The Pipeline
+Flagged:Breaking News: Britain announced that fully vaccinated travelers from the U.S. and the E.U. would be allowed to visit without quarantining upon arrival.
+Flagged:Events are back. Are you ready?
+Reviewed:Tell us more about your first month with AWS
+2021-07-28 11:55:19.260340
+
+
+2021-07-28 12:00:01.499487
+Reviewed:Breaking News: Gov. Andrew Cuomo of New York said all state employees must be vaccinated or face weekly tests, and announced stricter rules for state-hospital workers.
+Reviewed:Make customers happy with these 12 email templates
+Reviewed:July News From The Pipeline
+Reviewed:Breaking News: Britain announced that fully vaccinated travelers from the U.S. and the E.U. would be allowed to visit without quarantining upon arrival.
+Reviewed:Events are back. Are you ready?
+
+
+2021-07-28 12:05:01.464307
+
+
+Flagged:3 ways LinkedIn Sales Navigator can help you win
+2021-07-28 12:10:02.646191
+
+
+2021-07-28 12:15:01.693113
+Reviewed:3 ways LinkedIn Sales Navigator can help you win
+
+
+Flagged:"Is this legit ? Has anyone ever been to this?"
+Flagged:"Is this legit ? Has anyone ever been to this?"
+2021-07-28 12:20:06.014853
+"this didn't tag at first try"
+"hmm :confused:"
+Reviewed:"Is this legit ? Has anyone ever been to this?"
+
+
+2021-07-28 12:25:02.107313
+
+
+2021-07-28 12:30:01.847924
+
+
+2021-07-28 12:35:01.419430
+
+
+2021-07-28 12:40:01.906114
+
+
+2021-07-28 12:45:01.581493
+
+
+2021-07-28 12:50:02.145418
+
+
+2021-07-28 12:55:02.063563
+
+
+2021-07-28 13:00:06.517264
+
+
+2021-07-28 13:05:01.894288
+
+
+2021-07-28 13:10:01.753787
+
+
+2021-07-28 13:15:02.552230
+
+
+Flagged:Keep it professional. Get a business phone line.
+2021-07-28 13:20:04.542063
+Traceback (most recent call last):
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 242, in <module>
+    main()
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 234, in main
+    go_thru_convos()
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 72, in go_thru_convos
+    emails = response.json()["_results"]
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/env/lib/python3.8/site-packages/requests/models.py", line 910, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "/Applications/anaconda3/lib/python3.8/json/__init__.py", line 357, in loads
+    return _default_decoder.decode(s)
+  File "/Applications/anaconda3/lib/python3.8/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/Applications/anaconda3/lib/python3.8/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+
+2021-07-28 13:25:01.951201
+Reviewed:Keep it professional. Get a business phone line.
+
+
+2021-07-28 13:30:01.936378
+
+
+2021-07-28 13:35:01.756085
+
+
+Flagged:Re: Please Complete Our CS Advising Survey!
+2021-07-28 13:40:04.928122
+Reviewed:Re: Please Complete Our CS Advising Survey!
+
+
+2021-07-28 13:45:02
+
+
+2021-07-28 13:50:02
+
+
+Flagged:Breaking News: President Biden is expected to announce that civilian federal employees must be vaccinated or submit to regular testing and other safety restrictions.
+2021-07-28 13:55:04
+Reviewed:Breaking News: President Biden is expected to announce that civilian federal employees must be vaccinated or submit to regular testing and other safety restrictions.
+
+
+2021-07-28 14:00:01
+
+
+Traceback (most recent call last):
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 258, in <module>
+    main()
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 248, in main
+    tag_new_events()
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 60, in tag_new_events
+    events = response.json()["_results"]
+KeyError: '_results'
+
+
+Traceback (most recent call last):
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 266, in <module>
+    main()
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 256, in main
+    tag_new_events()
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 60, in tag_new_events
+    events = response.json()["_results"]
+KeyError: '_results'
+
+
+Traceback (most recent call last):
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 271, in <module>
+    main()
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 261, in main
+    tag_new_events()
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 60, in tag_new_events
+    events = response.json()["_results"]
+KeyError: '_results'
+
+
+Traceback (most recent call last):
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 279, in <module>
+    main()
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 269, in main
+    tag_new_events()
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 60, in tag_new_events
+    events = response.json()["_results"]
+KeyError: '_results'
+
+
+<Response [401]>
+Traceback (most recent call last):
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 280, in <module>
+    main()
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 270, in main
+    tag_new_events()
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 60, in tag_new_events
+    events = response.json()["_results"]
+KeyError: '_results'
+
+
+Traceback (most recent call last):
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 294, in <module>
+    main()
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 284, in main
+    tag_new_events()
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 60, in tag_new_events
+    response = requests.request("GET", url, headers=headers, data=payload)
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/env/lib/python3.8/site-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/env/lib/python3.8/site-packages/requests/sessions.py", line 528, in request
+    prep = self.prepare_request(req)
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/env/lib/python3.8/site-packages/requests/sessions.py", line 456, in prepare_request
+    p.prepare(
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/env/lib/python3.8/site-packages/requests/models.py", line 317, in prepare
+    self.prepare_headers(headers)
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/env/lib/python3.8/site-packages/requests/models.py", line 451, in prepare_headers
+    check_header_validity(header)
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/env/lib/python3.8/site-packages/requests/utils.py", line 978, in check_header_validity
+    raise InvalidHeader("Invalid return character or leading space in header: %s" % name)
+requests.exceptions.InvalidHeader: Invalid return character or leading space in header: Authorization
+
+
+<Response [200]>
+2021-07-28 14:35:01
