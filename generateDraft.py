@@ -120,10 +120,10 @@ def get_canned_response(template_ID):
     Helper function for create_draft(convo_ID,template_ID).
 
     Args:
-        template_ID: A string containing the ID of the response template
+        template_ID (str): The ID of the response template
 
     Returns:
-        response_template.json(): A JSON object of the response template
+        response_template.json() (JSON object): Details of the response template
     """
     url = "https://api2.frontapp.com/responses/" + template_ID
     payload = {}
@@ -139,8 +139,8 @@ def create_draft(convo_ID, template_ID):
     """Drafts a reply accordingly using a response template.    
 
     Args:
-        convo_ID: A string containing the ID of the conversation to reply to
-        template_ID: A string containing the ID of response template
+        convo_ID (str): ID of the conversation to reply to
+        template_ID (str): ID of response template
 
     Returns:
         None
@@ -162,8 +162,8 @@ def add_tag(convo_ID, tag_ID):
     """Add tag to a conversation.   
 
     Args:
-        convo_ID: A string containing the ID of the conversation
-        tag_ID: A string containing the ID of the tag to add 
+        convo_ID (str): ID of the conversation
+        tag_ID (str): ID of the tag to add 
 
     Returns:
         None
@@ -178,8 +178,8 @@ def remove_tag(convo_ID, tag_ID):
     """Removes tags from a conversation.   
 
     Args:
-        convo_ID: A string containing the ID of the conversation 
-        tag_ID: A string containing the ID of the tag to remove
+        convo_ID (str): ID of the conversation 
+        tag_ID (str): ID of the tag to remove
 
     Returns:
         None
@@ -196,7 +196,7 @@ def get_comments(convo_ID):
     This is a useful function to help decide which draft template to use. 
 
     Args:
-        convoID: A string containing the ID of the conversation
+        convoID (str): ID of the conversation
 
     Returns:
         None

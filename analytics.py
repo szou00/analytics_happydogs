@@ -34,7 +34,7 @@ def print_JSON_object(JSON_object):
     """Prints a formatted string of a JSON object. 
 
         Parameters:
-            obj: A Javascript Object
+            JSON_object: A Javascript Object
 
         Returns:
             None
