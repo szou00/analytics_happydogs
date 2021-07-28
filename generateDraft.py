@@ -1,4 +1,4 @@
-"""Front Automatic Draft Generator
+"""Automatic Draft Generator
 
 This script uses the Front API to review emails and draft replies with
 response templates when necessary. 
@@ -9,7 +9,17 @@ environment you are running this script in.
 This file can also be imported as a module and contains the following
 functions:
 
-    * 
+    * tag_new_events
+    * review_tagged_conversations
+
+    * print_JSON_object
+    * get_canned_response
+    * create_draft
+    * add_tag
+    * remove_tag
+    * get_comments
+    * save_current_run_time
+    * load_last_run_time
     * main - the main function of the script
 """
 
@@ -50,7 +60,7 @@ def tag_new_events():
     url = (
         "https://api2.frontapp.com/events?q[types]=comment&q[types]=inbound\
            &q[after]="
-        + str(time_of_last_run)
+        + str(time_of_last_run - 60)
     )
     payload = {}
     headers = {"Authorization": BEARER_TOKEN}
@@ -243,12 +253,7 @@ def main():
     tag_new_events()
     time.sleep(10)
     review_tagged_conversations()
-    # create_draft("cnv_8rjow91", "rsp_3rd8l")
 
-
-# to run the CRON JOB: */5 * * * * /Users/szou/Downloads/bu/happydogs/analytics_happydogs/env/bin/python
-# /Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py
-# >>/Users/szou/Downloads/bu/happydogs/analytics_happydogs/CRONoutput.log 2>&1
 
 if __name__ == "__main__":
     main()
