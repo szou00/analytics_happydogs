@@ -57,7 +57,9 @@ def tag_new_events():
     Returns:
         None
     """
-    time_of_last_run = load_last_run_time().timestamp()
+    time_of_last_run = (
+        load_last_run_time().timestamp()
+    )  # if never ran before, it'll start looking at events now, do we want to do that or have it look at ALL events
     url = (
         "https://api2.frontapp.com/events?q[types]=comment&q[types]=inbound\
            &q[after]="
@@ -218,8 +220,8 @@ def save_current_run_time():
     Returns:
         None
     """
-    path = "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/lastjob"  # hard coding this due to CRON, but will remove later
-    output_file = open(path, "w")
+    # path = "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/last_time_run"  # hard coding this due to CRON, but will remove later
+    output_file = open('last_time_run', "w")
     current_time_string = datetime.datetime.strftime(
         datetime.datetime.now(), "%Y-%m-%d %H:%M:%S"
     )
@@ -239,12 +241,12 @@ def load_last_run_time():
     Returns:
         None
     """
-    path = "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/lastjob"
-    if os.path.isfile(path):  # if the file exists
+    path = "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/last_time_run"
+    if os.path.isfile('last_time_run'):  # if the file exists
         f = open(path, "r")
-        lastJob = datetime.datetime.strptime(f.read(), "%Y-%m-%d %H:%M:%S")
+        last_run_time = datetime.datetime.strptime(f.read(), "%Y-%m-%d %H:%M:%S")
         f.close()
-        return lastJob
+        return last_run_time
     save_current_run_time()
     return (
         datetime.datetime.now()
@@ -254,7 +256,7 @@ def load_last_run_time():
 def main():
     print("\n")  # for easier CRON output viewing, separating each output
     tag_new_events()
-    time.sleep(10)
+    time.sleep(5)
     review_tagged_conversations()
 
 
