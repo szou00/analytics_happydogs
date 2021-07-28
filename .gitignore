@@ -1,3 +1,4 @@
 # Ignore output files
 lastjob
 CRONoutput.log
+last_time_run
