@@ -3,16 +3,16 @@
 This script uses the Front API to create a CSV file with analytics about
 emails.
 
-This script requires that `requests`, `pandas`, and `dateutil.parser` be 
+This script requires that `requests`, `pandas`, and `dateutil` be 
 installed within the Python environment you are running this script in.
 
 This file can also be imported as a module and contains the following
 functions:
 
-    * print_stats_to_CSV
-    * obtain_convo_metrics
-    * print_JSON_object
-    * main - the main function of the script
+    * print_stats_to_CSV - prints analytics to CSV file
+    * obtain_convo_metrics - retrieves all the analytics needed
+    * print_JSON_object - prints JSON objects in a friendly format
+    * main - the main function of the script, here it retrieves metrics, and then prints it to CSV file
 
 Author: Sharon Zou
 """
@@ -21,7 +21,7 @@ import requests
 import json
 import datetime
 import pandas as pd
-import dateutil.parser as dateparser
+from dateutil import parser as dateparser
 import time
 import sys
 
@@ -101,7 +101,7 @@ def obtain_convo_metrics(day, inboxID, inboxName, interval):
 
 
 def print_stats_to_CSV(start, end, interval):
-    """Use analytics of email tags on Front App to generaete a CSV file. 
+    """Use analytics of email tags on Front App to generate a CSV file. 
     
     Args: 
         start (datetime obj): The beginning of the time period to get stats of 
@@ -145,6 +145,7 @@ def main():
     except IndexError:
         print("\nExpected 2 or more command line arguments")
         print("Ex: 'python analytics.py 20210721 20210723'\n")
+        print("Ex: 'python analytics.py 20210721 20210723 1'\n")
         exit(1)
     except ValueError:
         print(

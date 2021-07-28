@@ -9,18 +9,17 @@ environment you are running this script in.
 This file can also be imported as a module and contains the following
 functions:
 
-    * tag_new_events
-    * review_tagged_conversations
-
-    * print_JSON_object
-    * get_canned_response
-    * create_draft
-    * add_tag
-    * remove_tag
-    * get_comments
-    * save_current_run_time
-    * load_last_run_time
-    * main - the main function of the script
+    * tag_new_events - tags emails with new activity 
+    * review_tagged_conversations - review tagged emails
+    * get_canned_response - retrieve a response template
+    * create_draft - create a draft based on a response template
+    * add_tag - add a tag to a conversation
+    * remove_tag - remove a tag from a conversation
+    * get_comments - retrieve comments from a conversation
+    * save_current_run_time - save current time to a file
+    * load_last_run_time - retrieve the last time the program was run 
+    * print_JSON_object - print JSON object in a friendly format
+    * main - the main function of the script. here, it tags new events, then it reviews tagged emails. 
 """
 
 import requests
@@ -60,7 +59,7 @@ def tag_new_events():
     url = (
         "https://api2.frontapp.com/events?q[types]=comment&q[types]=inbound\
            &q[after]="
-        + str(time_of_last_run - 60)
+        + str(time_of_last_run - 60) # subtracting one minute to compensate lag on Front's end JUST in case
     )
     payload = {}
     headers = {"Authorization": BEARER_TOKEN}
@@ -228,7 +227,7 @@ def save_current_run_time():
 def load_last_run_time():
     """Retrieves the last time the program was ran from the file. 
     
-    This increases efficiency by bypassing events that were already looked at. 
+    This helps increase efficiency by bypassing events that were already looked at. 
 
     Args:
         None
