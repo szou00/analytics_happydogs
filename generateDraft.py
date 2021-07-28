@@ -9,17 +9,19 @@ environment you are running this script in.
 This file can also be imported as a module and contains the following
 functions:
 
-    * tag_new_events - tags emails with new activity 
-    * review_tagged_conversations - review tagged emails
-    * get_canned_response - retrieve a response template
-    * create_draft - create a draft based on a response template
-    * add_tag - add a tag to a conversation
-    * remove_tag - remove a tag from a conversation
-    * get_comments - retrieve comments from a conversation
-    * save_current_run_time - save current time to a file
-    * load_last_run_time - retrieve the last time the program was run 
-    * print_JSON_object - print JSON object in a friendly format
-    * main - the main function of the script. here, it tags new events, then it reviews tagged emails. 
+    * tag_new_events: tags emails with new activity 
+    * review_tagged_conversations: review tagged emails
+    * get_canned_response: retrieve a response template
+    * create_draft: create a draft based on a response template
+    * add_tag: add a tag to a conversation
+    * remove_tag: remove a tag from a conversation
+    * get_comments: retrieve comments from a conversation
+    * save_current_run_time: save current time to a file
+    * load_last_run_time: retrieve the last time the program was run 
+    * print_JSON_object: print JSON object in a friendly format
+    * mainv the main function of the script. here, it tags new events, then it reviews tagged emails. 
+
+Author: Sharon Zou
 """
 
 import requests

@@ -9,10 +9,10 @@ installed within the Python environment you are running this script in.
 This file can also be imported as a module and contains the following
 functions:
 
-    * print_stats_to_CSV - prints analytics to CSV file
-    * obtain_convo_metrics - retrieves all the analytics needed
-    * print_JSON_object - prints JSON objects in a friendly format
-    * main - the main function of the script, here it retrieves metrics, and then prints it to CSV file
+    * print_stats_to_CSV: prints analytics to CSV file
+    * obtain_convo_metrics: retrieves all the analytics needed
+    * print_JSON_object: prints JSON objects in a friendly format
+    * main: the main function of the script, here it retrieves metrics, and then prints it to CSV file
 
 Author: Sharon Zou
 """
