@@ -19,7 +19,7 @@ functions:
     * save_current_run_time: save current time to a file
     * load_last_run_time: retrieve the last time the program was run 
     * print_JSON_object: print JSON object in a friendly format
-    * mainv the main function of the script. here, it tags new events, then it reviews tagged emails. 
+    * main: the main function of the script. here, it tags new events, then it reviews tagged emails. 
 
 Author: Sharon Zou
 """
@@ -61,12 +61,15 @@ def tag_new_events():
     url = (
         "https://api2.frontapp.com/events?q[types]=comment&q[types]=inbound\
            &q[after]="
-        + str(time_of_last_run - 60) # subtracting one minute to compensate lag on Front's end JUST in case
+        + str(
+            time_of_last_run - 60
+        )  # subtracting one minute to compensate lag on Front's end JUST in case
     )
     payload = {}
     headers = {"Authorization": BEARER_TOKEN}
     response = requests.request("GET", url, headers=headers, data=payload)
     events = response.json()["_results"]
+
     for event in events:
         email = event["conversation"]
         convo_ID = email["id"]
@@ -126,7 +129,6 @@ def get_canned_response(template_ID):
     payload = {}
     files = []
     headers = {"Authorization": BEARER_TOKEN}
-
     response_template = requests.request(
         "GET", url, headers=headers, data=payload, files=files
     )

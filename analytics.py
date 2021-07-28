@@ -11,7 +11,7 @@ functions:
 
     * print_stats_to_CSV: prints analytics to CSV file
     * obtain_convo_metrics: retrieves all the analytics needed
-    * print_JSON_object: prints JSON objects in a friendly format
+    * print_JSON_object: print JSON object in a friendly format
     * main: the main function of the script, here it retrieves metrics, and then prints it to CSV file
 
 Author: Sharon Zou
@@ -144,8 +144,10 @@ def main():
             print_stats_to_CSV(start, end, 7)
     except IndexError:
         print("\nExpected 2 or more command line arguments")
-        print("Ex: 'python analytics.py 20210721 20210723'\n")
-        print("Ex: 'python analytics.py 20210721 20210723 1'\n")
+        print(
+            "Ex: 'python analytics.py 20210721 20210723', or"
+            "'python analytics.py 20210721 20210723 1'\n"
+        )
         exit(1)
     except ValueError:
         print(
