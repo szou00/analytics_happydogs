@@ -29,6 +29,7 @@ import json
 import time
 import datetime
 import os.path
+import socket
 
 AUTO_REVIEWED = "tag_mmo1x"
 AUTO_REVIEW_NEEDED = "tag_mmlvp"
@@ -61,7 +62,7 @@ def tag_new_events():
         load_last_run_time().timestamp()
     )  # if never ran before, it'll start looking at events now, do we want to do that or have it look at ALL events
     url = (
-        "https://api2.frontapp.com/events?q[types]=comment&q[types]=inbound&q[after]="
+        "https://api2.frontapp.com/events?q[types]=inbound&q[types]=comment&q[after]="
         + str(
             time_of_last_run - 60
         )  # subtracting one minute to compensate lag on Front's end JUST in case
@@ -220,7 +221,7 @@ def save_current_run_time():
         None
     """
     # path = "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/last_time_run"  # hard coding this due to CRON, but will remove later
-    output_file = open('last_time_run', "w")
+    output_file = open("last_time_run", "w")
     current_time_string = datetime.datetime.strftime(
         datetime.datetime.now(), "%Y-%m-%d %H:%M:%S"
     )
@@ -241,8 +242,8 @@ def load_last_run_time():
         None
     """
     # path = "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/last_time_run"
-    if os.path.isfile('last_time_run'):  # if the file exists
-        f = open('last_time_run', "r")
+    if os.path.isfile("last_time_run"):  # if the file exists
+        f = open("last_time_run", "r")
         last_run_time = datetime.datetime.strptime(f.read(), "%Y-%m-%d %H:%M:%S")
         f.close()
         return last_run_time
@@ -253,10 +254,15 @@ def load_last_run_time():
 
 
 def main():
-    print("\n")  # for easier CRON output viewing, separating each output
-    tag_new_events()
-    time.sleep(5)
-    review_tagged_conversations()
+    try:
+        print("\n")  # for easier CRON output viewing, separating each output
+        tag_new_events()
+        time.sleep(5)
+        review_tagged_conversations()
+    except socket.error:
+        print("\nCan't connect to Front :(\n")
+        exit(1)
+    # for testing:
 
 
 if __name__ == "__main__":

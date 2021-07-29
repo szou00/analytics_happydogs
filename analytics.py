@@ -24,6 +24,7 @@ import pandas as pd
 from dateutil import parser as dateparser
 import time
 import sys
+import socket
 
 # Global variable to store a list of dictionaries where key=tag, value=number of convos
 analytics = []
@@ -43,7 +44,7 @@ def print_JSON_object(JSON_object):
     print(text)
 
 
-def obtain_convo_metrics(day, inboxID, inboxName, interval):
+def obtain_tag_metrics(day, inboxID, inboxName, interval):
     """Requests information from the Front API and appends that information to a list. 
         
     Args: 
@@ -55,7 +56,7 @@ def obtain_convo_metrics(day, inboxID, inboxName, interval):
         None
     """
 
-    convoInfo = {}
+    tagInfo = {}
     startDay = day  # keep track of start
 
     start = str(day.timestamp())
@@ -92,12 +93,12 @@ def obtain_convo_metrics(day, inboxID, inboxName, interval):
     for tag in tags:
         name = tag[0]["v"]
         num_of_open_convos = tag[3]["v"]
-        convoInfo["Date"] = startDay
-        convoInfo["Inbox"] = inboxName
-        convoInfo["Tag"] = name
-        convoInfo["Num"] = num_of_open_convos
-        analytics.append(convoInfo)
-        convoInfo = {}
+        tagInfo["Date"] = startDay
+        tagInfo["Inbox"] = inboxName
+        tagInfo["Tag"] = name
+        tagInfo["Num"] = num_of_open_convos
+        analytics.append(tagInfo)
+        tagInfo = {}
 
 
 def print_stats_to_CSV(start, end, interval):
@@ -120,9 +121,9 @@ def print_stats_to_CSV(start, end, interval):
     }
 
     while start <= end:
-        print(start)
         for inboxID, inboxName in inboxes.items():
-            obtain_convo_metrics(start, inboxID, inboxName, interval)
+            obtain_tag_metrics(start, inboxID, inboxName, interval)
+        print("Success:" + start)
         start += delta
 
     dataframe = pd.DataFrame(analytics)
@@ -154,6 +155,9 @@ def main():
             "\nDates are invalid: make sure they are in the format YYYYMMDD, are in the present,"
         )
         print("and start date is earlier than end date\n")
+        exit(1)
+    except socket.error:
+        print("\nCan't connect to Front :(\n")
         exit(1)
 
 
