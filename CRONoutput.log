@@ -702,3 +702,531 @@ Flagged:Breaking News: The White House and senators reached a deal on a bipartis
 2021-07-28 16:55:03
 "bruh"
 Reviewed:Use Hanlon's Razor to foster empathy
+
+
+Traceback (most recent call last):
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 264, in <module>
+    main()
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 258, in main
+    tag_new_events()
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 61, in tag_new_events
+    load_last_run_time().timestamp()
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 246, in load_last_run_time
+    f = open(path, "r")
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/szou/Downloads/bu/happydogs/analytics_happydogs/last_time_run'
+
+
+Traceback (most recent call last):
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 264, in <module>
+    main()
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 258, in main
+    tag_new_events()
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 61, in tag_new_events
+    load_last_run_time().timestamp()
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 246, in load_last_run_time
+    f = open(path, "r")
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/szou/Downloads/bu/happydogs/analytics_happydogs/last_time_run'
+
+
+Traceback (most recent call last):
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 264, in <module>
+    main()
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 258, in main
+    tag_new_events()
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 61, in tag_new_events
+    load_last_run_time().timestamp()
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 246, in load_last_run_time
+    f = open(path, "r")
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/szou/Downloads/bu/happydogs/analytics_happydogs/last_time_run'
+
+
+Traceback (most recent call last):
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 264, in <module>
+    main()
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 258, in main
+    tag_new_events()
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 61, in tag_new_events
+    load_last_run_time().timestamp()
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 246, in load_last_run_time
+    f = open(path, "r")
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/szou/Downloads/bu/happydogs/analytics_happydogs/last_time_run'
+
+
+Traceback (most recent call last):
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 264, in <module>
+    main()
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 258, in main
+    tag_new_events()
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 61, in tag_new_events
+    load_last_run_time().timestamp()
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 246, in load_last_run_time
+    f = open(path, "r")
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/szou/Downloads/bu/happydogs/analytics_happydogs/last_time_run'
+
+
+Traceback (most recent call last):
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 264, in <module>
+    main()
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 258, in main
+    tag_new_events()
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 61, in tag_new_events
+    load_last_run_time().timestamp()
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 246, in load_last_run_time
+    f = open(path, "r")
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/szou/Downloads/bu/happydogs/analytics_happydogs/last_time_run'
+
+
+Traceback (most recent call last):
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 264, in <module>
+    main()
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 258, in main
+    tag_new_events()
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 61, in tag_new_events
+    load_last_run_time().timestamp()
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 246, in load_last_run_time
+    f = open(path, "r")
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/szou/Downloads/bu/happydogs/analytics_happydogs/last_time_run'
+
+
+Traceback (most recent call last):
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 264, in <module>
+    main()
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 258, in main
+    tag_new_events()
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 61, in tag_new_events
+    load_last_run_time().timestamp()
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 246, in load_last_run_time
+    f = open(path, "r")
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/szou/Downloads/bu/happydogs/analytics_happydogs/last_time_run'
+
+
+Traceback (most recent call last):
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 264, in <module>
+    main()
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 258, in main
+    tag_new_events()
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 61, in tag_new_events
+    load_last_run_time().timestamp()
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 246, in load_last_run_time
+    f = open(path, "r")
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/szou/Downloads/bu/happydogs/analytics_happydogs/last_time_run'
+
+
+Traceback (most recent call last):
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 264, in <module>
+    main()
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 258, in main
+    tag_new_events()
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 61, in tag_new_events
+    load_last_run_time().timestamp()
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 246, in load_last_run_time
+    f = open(path, "r")
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/szou/Downloads/bu/happydogs/analytics_happydogs/last_time_run'
+
+
+Traceback (most recent call last):
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 264, in <module>
+    main()
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 258, in main
+    tag_new_events()
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 61, in tag_new_events
+    load_last_run_time().timestamp()
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 246, in load_last_run_time
+    f = open(path, "r")
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/szou/Downloads/bu/happydogs/analytics_happydogs/last_time_run'
+
+
+Traceback (most recent call last):
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 264, in <module>
+    main()
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 258, in main
+    tag_new_events()
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 61, in tag_new_events
+    load_last_run_time().timestamp()
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 246, in load_last_run_time
+    f = open(path, "r")
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/szou/Downloads/bu/happydogs/analytics_happydogs/last_time_run'
+
+
+Traceback (most recent call last):
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 264, in <module>
+    main()
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 258, in main
+    tag_new_events()
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 61, in tag_new_events
+    load_last_run_time().timestamp()
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 246, in load_last_run_time
+    f = open(path, "r")
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/szou/Downloads/bu/happydogs/analytics_happydogs/last_time_run'
+
+
+Traceback (most recent call last):
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 264, in <module>
+    main()
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 258, in main
+    tag_new_events()
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 61, in tag_new_events
+    load_last_run_time().timestamp()
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 246, in load_last_run_time
+    f = open(path, "r")
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/szou/Downloads/bu/happydogs/analytics_happydogs/last_time_run'
+
+
+Traceback (most recent call last):
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 264, in <module>
+    main()
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 258, in main
+    tag_new_events()
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 61, in tag_new_events
+    load_last_run_time().timestamp()
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 246, in load_last_run_time
+    f = open(path, "r")
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/szou/Downloads/bu/happydogs/analytics_happydogs/last_time_run'
+
+
+Traceback (most recent call last):
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 264, in <module>
+    main()
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 258, in main
+    tag_new_events()
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 61, in tag_new_events
+    load_last_run_time().timestamp()
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 246, in load_last_run_time
+    f = open(path, "r")
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/szou/Downloads/bu/happydogs/analytics_happydogs/last_time_run'
+
+
+Traceback (most recent call last):
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 264, in <module>
+    main()
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 258, in main
+    tag_new_events()
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 61, in tag_new_events
+    load_last_run_time().timestamp()
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 246, in load_last_run_time
+    f = open(path, "r")
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/szou/Downloads/bu/happydogs/analytics_happydogs/last_time_run'
+
+
+Traceback (most recent call last):
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 264, in <module>
+    main()
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 258, in main
+    tag_new_events()
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 61, in tag_new_events
+    load_last_run_time().timestamp()
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 246, in load_last_run_time
+    f = open(path, "r")
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/szou/Downloads/bu/happydogs/analytics_happydogs/last_time_run'
+
+
+Traceback (most recent call last):
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 264, in <module>
+    main()
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 258, in main
+    tag_new_events()
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 61, in tag_new_events
+    load_last_run_time().timestamp()
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 246, in load_last_run_time
+    f = open(path, "r")
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/szou/Downloads/bu/happydogs/analytics_happydogs/last_time_run'
+
+
+Traceback (most recent call last):
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 264, in <module>
+    main()
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 258, in main
+    tag_new_events()
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 61, in tag_new_events
+    load_last_run_time().timestamp()
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 246, in load_last_run_time
+    f = open(path, "r")
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/szou/Downloads/bu/happydogs/analytics_happydogs/last_time_run'
+
+
+Traceback (most recent call last):
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 264, in <module>
+    main()
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 258, in main
+    tag_new_events()
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 61, in tag_new_events
+    load_last_run_time().timestamp()
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 246, in load_last_run_time
+    f = open(path, "r")
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/szou/Downloads/bu/happydogs/analytics_happydogs/last_time_run'
+
+
+Traceback (most recent call last):
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 264, in <module>
+    main()
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 258, in main
+    tag_new_events()
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 61, in tag_new_events
+    load_last_run_time().timestamp()
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 246, in load_last_run_time
+    f = open(path, "r")
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/szou/Downloads/bu/happydogs/analytics_happydogs/last_time_run'
+
+
+Traceback (most recent call last):
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 264, in <module>
+    main()
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 258, in main
+    tag_new_events()
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 61, in tag_new_events
+    load_last_run_time().timestamp()
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 246, in load_last_run_time
+    f = open(path, "r")
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/szou/Downloads/bu/happydogs/analytics_happydogs/last_time_run'
+
+
+Traceback (most recent call last):
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 264, in <module>
+    main()
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 258, in main
+    tag_new_events()
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 61, in tag_new_events
+    load_last_run_time().timestamp()
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 246, in load_last_run_time
+    f = open(path, "r")
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/szou/Downloads/bu/happydogs/analytics_happydogs/last_time_run'
+
+
+Traceback (most recent call last):
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 264, in <module>
+    main()
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 258, in main
+    tag_new_events()
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 61, in tag_new_events
+    load_last_run_time().timestamp()
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 246, in load_last_run_time
+    f = open(path, "r")
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/szou/Downloads/bu/happydogs/analytics_happydogs/last_time_run'
+
+
+Traceback (most recent call last):
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 264, in <module>
+    main()
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 258, in main
+    tag_new_events()
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 61, in tag_new_events
+    load_last_run_time().timestamp()
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 246, in load_last_run_time
+    f = open(path, "r")
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/szou/Downloads/bu/happydogs/analytics_happydogs/last_time_run'
+
+
+Traceback (most recent call last):
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 264, in <module>
+    main()
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 258, in main
+    tag_new_events()
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 61, in tag_new_events
+    load_last_run_time().timestamp()
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 246, in load_last_run_time
+    f = open(path, "r")
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/szou/Downloads/bu/happydogs/analytics_happydogs/last_time_run'
+
+
+Traceback (most recent call last):
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 264, in <module>
+    main()
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 258, in main
+    tag_new_events()
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 61, in tag_new_events
+    load_last_run_time().timestamp()
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 246, in load_last_run_time
+    f = open(path, "r")
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/szou/Downloads/bu/happydogs/analytics_happydogs/last_time_run'
+
+
+Traceback (most recent call last):
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 264, in <module>
+    main()
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 258, in main
+    tag_new_events()
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 61, in tag_new_events
+    load_last_run_time().timestamp()
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 246, in load_last_run_time
+    f = open(path, "r")
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/szou/Downloads/bu/happydogs/analytics_happydogs/last_time_run'
+
+
+Traceback (most recent call last):
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 264, in <module>
+    main()
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 258, in main
+    tag_new_events()
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 61, in tag_new_events
+    load_last_run_time().timestamp()
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 246, in load_last_run_time
+    f = open(path, "r")
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/szou/Downloads/bu/happydogs/analytics_happydogs/last_time_run'
+
+
+Traceback (most recent call last):
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 264, in <module>
+    main()
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 258, in main
+    tag_new_events()
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 61, in tag_new_events
+    load_last_run_time().timestamp()
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 246, in load_last_run_time
+    f = open(path, "r")
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/szou/Downloads/bu/happydogs/analytics_happydogs/last_time_run'
+
+
+Traceback (most recent call last):
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 264, in <module>
+    main()
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 258, in main
+    tag_new_events()
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 61, in tag_new_events
+    load_last_run_time().timestamp()
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 246, in load_last_run_time
+    f = open(path, "r")
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/szou/Downloads/bu/happydogs/analytics_happydogs/last_time_run'
+
+
+Traceback (most recent call last):
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 264, in <module>
+    main()
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 258, in main
+    tag_new_events()
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 61, in tag_new_events
+    load_last_run_time().timestamp()
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 246, in load_last_run_time
+    f = open(path, "r")
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/szou/Downloads/bu/happydogs/analytics_happydogs/last_time_run'
+
+
+Traceback (most recent call last):
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 264, in <module>
+    main()
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 258, in main
+    tag_new_events()
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 61, in tag_new_events
+    load_last_run_time().timestamp()
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 246, in load_last_run_time
+    f = open(path, "r")
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/szou/Downloads/bu/happydogs/analytics_happydogs/last_time_run'
+
+
+Traceback (most recent call last):
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 264, in <module>
+    main()
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 258, in main
+    tag_new_events()
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 61, in tag_new_events
+    load_last_run_time().timestamp()
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 246, in load_last_run_time
+    f = open(path, "r")
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/szou/Downloads/bu/happydogs/analytics_happydogs/last_time_run'
+
+
+Traceback (most recent call last):
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 264, in <module>
+    main()
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 258, in main
+    tag_new_events()
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 61, in tag_new_events
+    load_last_run_time().timestamp()
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 246, in load_last_run_time
+    f = open(path, "r")
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/szou/Downloads/bu/happydogs/analytics_happydogs/last_time_run'
+
+
+Traceback (most recent call last):
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 264, in <module>
+    main()
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 258, in main
+    tag_new_events()
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 61, in tag_new_events
+    load_last_run_time().timestamp()
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 246, in load_last_run_time
+    f = open(path, "r")
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/szou/Downloads/bu/happydogs/analytics_happydogs/last_time_run'
+
+
+Traceback (most recent call last):
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 264, in <module>
+    main()
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 258, in main
+    tag_new_events()
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 61, in tag_new_events
+    load_last_run_time().timestamp()
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 246, in load_last_run_time
+    f = open(path, "r")
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/szou/Downloads/bu/happydogs/analytics_happydogs/last_time_run'
+
+
+Traceback (most recent call last):
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 264, in <module>
+    main()
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 258, in main
+    tag_new_events()
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 61, in tag_new_events
+    load_last_run_time().timestamp()
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 246, in load_last_run_time
+    f = open(path, "r")
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/szou/Downloads/bu/happydogs/analytics_happydogs/last_time_run'
+
+
+Traceback (most recent call last):
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 264, in <module>
+    main()
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 258, in main
+    tag_new_events()
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 61, in tag_new_events
+    load_last_run_time().timestamp()
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 246, in load_last_run_time
+    f = open(path, "r")
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/szou/Downloads/bu/happydogs/analytics_happydogs/last_time_run'
+
+
+Traceback (most recent call last):
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 264, in <module>
+    main()
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 258, in main
+    tag_new_events()
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 61, in tag_new_events
+    load_last_run_time().timestamp()
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 246, in load_last_run_time
+    f = open(path, "r")
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/szou/Downloads/bu/happydogs/analytics_happydogs/last_time_run'
+
+
+Traceback (most recent call last):
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 264, in <module>
+    main()
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 258, in main
+    tag_new_events()
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 61, in tag_new_events
+    load_last_run_time().timestamp()
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 246, in load_last_run_time
+    f = open(path, "r")
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/szou/Downloads/bu/happydogs/analytics_happydogs/last_time_run'
+
+
+Traceback (most recent call last):
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 264, in <module>
+    main()
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 258, in main
+    tag_new_events()
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 61, in tag_new_events
+    load_last_run_time().timestamp()
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 246, in load_last_run_time
+    f = open(path, "r")
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/szou/Downloads/bu/happydogs/analytics_happydogs/last_time_run'
+
+
+Traceback (most recent call last):
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 264, in <module>
+    main()
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 258, in main
+    tag_new_events()
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 61, in tag_new_events
+    load_last_run_time().timestamp()
+  File "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/generateDraft.py", line 246, in load_last_run_time
+    f = open(path, "r")
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/szou/Downloads/bu/happydogs/analytics_happydogs/last_time_run'

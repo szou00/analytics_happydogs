@@ -241,9 +241,9 @@ def load_last_run_time():
     Returns:
         None
     """
-    path = "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/last_time_run"
+    # path = "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/last_time_run"
     if os.path.isfile('last_time_run'):  # if the file exists
-        f = open(path, "r")
+        f = open('last_time_run', "r")
         last_run_time = datetime.datetime.strptime(f.read(), "%Y-%m-%d %H:%M:%S")
         f.close()
         return last_run_time
