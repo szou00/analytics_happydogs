@@ -61,8 +61,7 @@ def tag_new_events():
         load_last_run_time().timestamp()
     )  # if never ran before, it'll start looking at events now, do we want to do that or have it look at ALL events
     url = (
-        "https://api2.frontapp.com/events?q[types]=comment&q[types]=inbound\
-           &q[after]="
+        "https://api2.frontapp.com/events?q[types]=comment&q[types]=inbound&q[after]="
         + str(
             time_of_last_run - 60
         )  # subtracting one minute to compensate lag on Front's end JUST in case
