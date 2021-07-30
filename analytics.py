@@ -37,11 +37,11 @@ def print_JSON_object(JSON_object):
     This lets us view analytics from Front in a much 
     friendlier format. 
 
-        Parameters:
-            JSON_object: A Javascript Object
+    Args:
+        obj (JSON object): A JSON Object from an API request
 
-        Returns:
-            None
+    Returns:
+        None
     """
     text = json.dumps(JSON_object, sort_keys=True, indent=4)
     print(text)
