@@ -39,6 +39,9 @@ BEARER_TOKEN = "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzY29wZXMiOlsicHJp
 def print_JSON_object(JSON_object):
     """Prints a reader-friendly, formatted string of a JSON object. 
 
+    This lets us view events/conversations from Front in a much 
+    friendlier format. 
+
     Args:
         obj (JSON object): A JSON Object from an API request
 
@@ -52,12 +55,18 @@ def print_JSON_object(JSON_object):
 def tag_new_events():
     """Tags emails that have new activity with 'AUTO-review-needed'
 
+    Every time the program runs, this tracks the new activities (such as comment or
+    message received) and quickly flags them. We can only look at emails with a certain
+    tag, so this is really helpful in letting us quickly go through emails that may need 
+    drafts generated. 
+
     Args:
         None
 
     Returns:
         None
     """
+    # Make API request to retrieve events after last time the program ran
     time_of_last_run = (
         load_last_run_time().timestamp()
     )  # if never ran before, it'll start looking at events now, do we want to do that or have it look at ALL events
@@ -72,6 +81,7 @@ def tag_new_events():
     response = requests.request("GET", url, headers=headers, data=payload)
     events = response.json()["_results"]
 
+    # For each new event, flag it with a tag
     for event in events:
         email = event["conversation"]
         convo_ID = email["id"]
@@ -95,12 +105,14 @@ def review_tagged_conversations():
     Returns:
         None
     """
+    # Makes API request to obtain all conversations with tag and need to reviewed
     url = "https://api2.frontapp.com/conversations/search/tag:" + AUTO_REVIEW_NEEDED
     payload = {}
     files = []
     headers = {"Authorization": BEARER_TOKEN}
     response = requests.request("GET", url, headers=headers, data=payload, files=files)
 
+    # Obtain the emails that need to be reviewed and possibly create drafts
     emails = response.json()["_results"]
     for email in emails:
         convo_ID = email["id"]
@@ -119,7 +131,7 @@ def review_tagged_conversations():
 def get_canned_response(template_ID):
     """Retrieves message template. 
     
-    Helper function for create_draft(convo_ID,template_ID).
+    Helper function for create_draft().
 
     Args:
         template_ID (str): The ID of the response template
@@ -127,6 +139,7 @@ def get_canned_response(template_ID):
     Returns:
         response_template.json() (JSON object): Details of the response template
     """
+    # Make API request to retrieve message template from Front API based on its ID
     url = "https://api2.frontapp.com/responses/" + template_ID
     payload = {}
     files = []
@@ -147,6 +160,8 @@ def create_draft(convo_ID, template_ID):
     Returns:
         None
     """
+    # Get response template through helper function.
+    # Make an API request to reply to a conversation with the content in that template
     response_template = get_canned_response(template_ID)
     url = "https://api2.frontapp.com/conversations/" + convo_ID + "/drafts"
     payload = {
@@ -170,6 +185,7 @@ def add_tag(convo_ID, tag_ID):
     Returns:
         None
     """
+    # Make API request
     url = "https://api2.frontapp.com/conversations/" + convo_ID + "/tags"
     payload = json.dumps({"tag_ids": [tag_ID]})
     headers = {"Authorization": BEARER_TOKEN, "Content-Type": "application/json"}
@@ -186,6 +202,7 @@ def remove_tag(convo_ID, tag_ID):
     Returns:
         None
     """
+    # Make API request
     url = "https://api2.frontapp.com/conversations/" + convo_ID + "/tags"
     payload = json.dumps({"tag_ids": [tag_ID]})
     headers = {"Authorization": BEARER_TOKEN, "Content-Type": "application/json"}
@@ -203,11 +220,13 @@ def get_comments(convo_ID):
     Returns:
         None
     """
+    # Make API request
     url = "https://api2.frontapp.com/conversations/" + convo_ID + "/comments"
     payload = {}
     headers = {"Authorization": BEARER_TOKEN}
     response = requests.request("GET", url, headers=headers, data=payload)
     for comment in response.json()["_results"]:
+        # For each comment in Front, print out its message
         print_JSON_object(comment["body"])
 
 
@@ -242,27 +261,26 @@ def load_last_run_time():
         None
     """
     # path = "/Users/szou/Downloads/bu/happydogs/analytics_happydogs/last_time_run"
-    if os.path.isfile("last_time_run"):  # if the file exists
+    if os.path.isfile("last_time_run"):  #
+        # If the file exists
         f = open("last_time_run", "r")
         last_run_time = datetime.datetime.strptime(f.read(), "%Y-%m-%d %H:%M:%S")
         f.close()
         return last_run_time
     save_current_run_time()
-    return (
-        datetime.datetime.now()
-    )  # if file doesn't exist (possible if it's the first run), return current time
+    # If file doesn't exist (possible if it's the first run), return current time
+    return datetime.datetime.now()
 
 
 def main():
     try:
-        print("\n")  # for easier CRON output viewing, separating each output
         tag_new_events()
+        print("\n")
         time.sleep(5)
         review_tagged_conversations()
     except socket.error:
         print("\nCan't connect to Front :(\n")
         exit(1)
-    # for testing:
 
 
 if __name__ == "__main__":
