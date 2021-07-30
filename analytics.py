@@ -161,10 +161,10 @@ def main():
         exit(1)
     except ValueError:
         # If program detects dates in invalid formats, print out corresponding error message
-        print(
-            "\nDates are invalid: make sure they are in the format YYYYMMDD, are in the present,"
-        )
-        print("and start date is earlier than end date\n")
+        print("\nDates are invalid. Make sure: ")
+        print("- they are in the format YYYYMMDD")
+        print("- and start date is earlier than end date")
+        print("- are in the present")
         exit(1)
     except socket.error:
         # If program loses connection and can't successfully call the Front API,
