@@ -11,8 +11,11 @@ functions:
 
     * print_stats_to_CSV: prints analytics to CSV file
     * obtain_convo_metrics: retrieves all the analytics needed
-    * print_JSON_object: print JSON object in a friendly format
+    * print_friendly_JSON_object: print JSON object in a friendly format
     * main: the main function of the script, here it retrieves metrics, and then prints it to CSV file
+
+Warnings:
+    To be filled
 
 Author: Sharon Zou
 """
@@ -31,7 +34,7 @@ analytics = []
 BEARER_TOKEN = "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzY29wZXMiOlsic2hhcmVkOioiXSwiaWF0IjoxNjI2NzExMDI2LCJpc3MiOiJmcm9udCIsInN1YiI6ImhhcHB5X2RvZ3NfbnljIiwianRpIjoiZTUxYWFkNGM5Y2E3ODlhMiJ9.xZAyAkDSlxcaKYj9rhozowo84zBMVH4q7X0lGNZttn0"
 
 
-def print_JSON_object(JSON_object):
+def print_friendly_JSON_object(JSON_object):
     """Prints a formatted string of a JSON object. 
 
     This lets us view analytics from Front in a much 
@@ -66,9 +69,6 @@ def obtain_tag_metrics(day, inbox_ID, inbox_name, interval):
 
     # Make a request to the Front API
     # Requires us to make two API requests to the same endpoint:
-    # The first request triggers the calculation on the back-end,
-    # program will sleep for a short time to allow the calculation to finish,
-    # and then the second request will retrieve the actual calculation
     url = (
         "https://api2.frontapp.com/analytics?start="
         + start
@@ -80,8 +80,12 @@ def obtain_tag_metrics(day, inbox_ID, inbox_name, interval):
     payload = {}
     files = {}
     headers = {"Authorization": BEARER_TOKEN}
-    requests.request("GET", url, headers=headers, data=payload, files=files)
-    time.sleep(0.5)
+    requests.request(
+        "GET", url, headers=headers, data=payload, files=files
+    )  # This first request will trigger the calculation on the back-end,
+    time.sleep(
+        0.5
+    )  # Program sleeps for a little as it waits for calculation to finish on the back-end
     response = requests.request("GET", url, headers=headers, data=payload, files=files)
 
     # Grab information associated with each tag and append it to the list

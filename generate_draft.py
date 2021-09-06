@@ -18,8 +18,11 @@ functions:
     * get_comments: retrieve comments from a conversation
     * save_current_run_time: save current time to a file
     * load_last_run_time: retrieve the last time the program was run 
-    * print_JSON_object: print JSON object in a friendly format
+    * print_friendly_JSON_object: print JSON object in a friendly format
     * main: the main function of the script. here, it tags new events, then it reviews tagged emails. 
+
+Warnings:
+    To be filled
 
 Author: Sharon Zou
 """
@@ -36,7 +39,7 @@ AUTO_REVIEW_NEEDED = "tag_mmlvp"
 BEARER_TOKEN = "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzY29wZXMiOlsicHJpdmF0ZToqIl0sImlhdCI6MTYyNjk4MTM5NSwiaXNzIjoiZnJvbnQiLCJzdWIiOiJoYXBweV9kb2dzX255YyIsImp0aSI6IjBiNjJkNWMzYTRmMWExMzQifQ.IPviahR63lerU4f1zJmBZGkDTW1nA3GXy2zr_gGgVPU"
 
 
-def print_JSON_object(JSON_object):
+def print_friendly_JSON_object(JSON_object):
     """Prints a reader-friendly, formatted string of a JSON object. 
 
     This lets us view events/conversations from Front in a much 
@@ -227,7 +230,7 @@ def get_comments(convo_ID):
     response = requests.request("GET", url, headers=headers, data=payload)
     for comment in response.json()["_results"]:
         # For each comment in Front, print out its message
-        print_JSON_object(comment["body"])
+        print_friendly_JSON_object(comment["body"])
 
 
 def save_current_run_time():
@@ -276,7 +279,6 @@ def main():
     try:
         tag_new_events()
         print("\n")
-        time.sleep(5)
         review_tagged_conversations()
     except socket.error:
         print("\nCan't connect to Front :(\n")
